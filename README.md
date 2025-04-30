@@ -29,13 +29,11 @@ exit
 sudo ls -al /home/cryptonec
 sudo ecryptfs-migrate-home -u cryptonec #Миграция домашнего каталога пользователя cryptonec
 sudo ls -al /home/cryptonec
-
-ecryptfs-unwrap-passphrase #Информация для восстановления
 ```
-   * До шифрования
+   ##### До шифрования
 ![13-02](https://github.com/Qshar1408/13-02/blob/main/img/hw_13_02_001.png)
 
-   * После шифрования
+   ##### После шифрования
 ![13-02](https://github.com/Qshar1408/13-02/blob/main/img/hw_13_02_002.png)
 
 ### Задание 2
