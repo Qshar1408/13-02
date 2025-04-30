@@ -10,6 +10,34 @@
 
 *В качестве ответа  пришлите снимки экрана домашнего каталога пользователя с исходными и зашифрованными данными.*  
 
+#### Решение:
+```bash
+sudo apt update
+sudo apt install -y ecryptfs-utils
+
+#sudo adduser --encrypt-home cryptonec
+sudo adduser cryptonec
+sudo usermod -aG sudo cryptonec
+
+su - cryptonec
+pwd
+touch readmefile
+#ls -al /home/cryptonec
+ls -al ~
+exit
+
+sudo ls -al /home/cryptonec
+sudo ecryptfs-migrate-home -u cryptonec #Миграция домашнего каталога пользователя cryptonec
+sudo ls -al /home/cryptonec
+
+ecryptfs-unwrap-passphrase #Информация для восстановления
+```
+   * До шифрования
+![13-02](https://github.com/Qshar1408/13-02/blob/main/img/hw_13_02_001.png)
+
+   * После шифрования
+![13-02](https://github.com/Qshar1408/13-02/blob/main/img/hw_13_02_002.png)
+
 ### Задание 2
 
 1. Установите поддержку **LUKS**.
